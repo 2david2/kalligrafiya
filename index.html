@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1 id="time">60</h1>
+    <h1 id="2"> </h1>
+<input type="text">
+<button onclick="start()">START</button>
+<h1 id="4"> </h1>
+
+</center>
+<script>
+    word=0
+    score=60
+    interval=undefined
+    function start() {
+        clearInterval(interval)
+        score=60
+        word = Math.floor(Math.random()*10)+1
+          interval=setInterval(function  () {
+              score--
+              document.getElementById('time').innerHTML =score
+              if (score==0)
+              {
+                  clearInterval(interval)
+              }
+          },100)
+        }
+
+
+    list = ["каллиграфия", "оптимистичный","правописание","иерархия","кровожадный","одиннадцатиклассница","дежурный",
+"покровительствовавшие","значимость","содержание"]
+
+
+
+        if(word==1){
+           document.getElementById('2').innerHTML =word
+        }
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
