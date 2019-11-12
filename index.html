@@ -10,6 +10,9 @@
     <h1 id="2"> </h1>
 <input type="text">
 <button onclick="start()">START</button>
+<button onclick="p1()">NEXT</button>
+
+    <h1>YOUR SCORES ARE</h1>
 <h1 id="4"> </h1>
 
 </center>
@@ -19,27 +22,77 @@
     interval=undefined
     function start() {
         clearInterval(interval)
-        score=60
-        word = Math.floor(Math.random()*10)+1
-          interval=setInterval(function  () {
-              score--
-              document.getElementById('time').innerHTML =score
-              if (score==0)
-              {
-                  clearInterval(interval)
-              }
-          },100)
+        point = 0
+        score = 60
+        word = Math.floor(Math.random() * 10) + 1
+        interval = setInterval(function () {
+            score--
+            document.getElementById('time').innerHTML = score
+            if (score == 0) {
+                clearInterval(interval)
+                 alert("ВРЕМЯ ВЫШЛО!!!")
+            }
+        }, 1000)
+    }
+    function p1() {
+        word = Math.floor(Math.random() * 10) + 1
+
+        list = ["каллиграфия", "оптимистичный", "правописание", "иерархия", "кровожадный", "одиннадцатиклассница", "дежурный",
+            "покровительствовавшие", "значимость", "содержание"]
+
+
+        if (word == 1) {
+            document.getElementById('2').innerHTML = "каллиграфия"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 2) {
+            document.getElementById('2').innerHTML = "оптимистичный"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 3) {
+            document.getElementById('2').innerHTML = "правописание"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 4) {
+            document.getElementById('2').innerHTML = "иерархия"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 5) {
+            document.getElementById('2').innerHTML = "кровожадный"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 6) {
+            document.getElementById('2').innerHTML = "одиннадцатиклассница"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 7) {
+            document.getElementById('2').innerHTML = "дежурный"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 8) {
+            document.getElementById('2').innerHTML = "покровительствовавшие"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 9) {
+            document.getElementById('2').innerHTML = "значимость"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
+        if (word == 10) {
+            document.getElementById('2').innerHTML = "содержание"
+             point++
+               document.getElementById('4').innerHTML = point
+        }
         }
 
-
-    list = ["каллиграфия", "оптимистичный","правописание","иерархия","кровожадный","одиннадцатиклассница","дежурный",
-"покровительствовавшие","значимость","содержание"]
-
-
-
-        if(word==1){
-           document.getElementById('2').innerHTML =word
-        }
 
 
 
@@ -50,8 +103,5 @@
 
 
 </script>
-
-
-
 </body>
 </html>
